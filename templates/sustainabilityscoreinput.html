@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% block title %}Calculate your Sustainability Score{% endblock %}
+
+{% block content %}
+
+
+<section class="page-section" id="contact">
+    <div class="container">
+        <p class="pre-wrap masthead-subheading font-weight-light mb-0"></p>
+        <p class="pre-wrap masthead-subheading font-weight-light mb-0"></p>
+        <!-- Contact Section Heading-->
+        <div class="text-center">
+            <br><br><br><br>
+            <h2 class="page-section-heading text-secondary d-inline-block mb-0">CHALLENGE: TOUCH GRASS</h2>
+            <br>
+            <br>
+        </div>
+        <!-- Contact Section Content-->
+        <div class="row justify-content-center">
+            <p class="pre-wrap masthead-subheading font-weight-light mb-0">You have been challenged to go outside to touch grass. To prove you accomplished your mission, take a picture of one of the following types of flowers: Astilbe, Bellflower, Black Eyed Susan, Calendula, California Poppy, Carnation, Common Daisy, Coreopsis, Dandelion, Iris, Rose, Sunflower, Tulip, or Water Lily.</li>
+            </p>
+        </div>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Form -->
+         <!-- Main Content -->
+        <div class="Inputs">
+            <form method="POST" action="/yoursustainabilityscore">
+                <div class="row justify-content-center">
+                    <h1>Survey Questions</h1>
+                </div>
+                <label for="age">Enter your age:</label>
+                <input type="text" id="age" name="age">
+                <br>
+
+                <label for="location">Which one of these options best describes your living situation?</label>
+                <select name="location" id="location">
+                    <option value="Urban">Urban</option>
+                    <option value="Suburban">Suburban</option>
+                    <option value="Rural">Rural</option>
+                </select>
+                <br>
+
+                <label for="Diet-type">Which type of diet do you follow?</label>
+                <select name="Diet-type" id="Diet-type">
+                    <option value="Mostly Plant-Based">Mostly Plant Based</option>
+                    <option value="Balanced">Balanced</option>
+                    <option value="Mostly Animal-Based">Mostly Animal Based</option>
+                </select>
+                <br>
+
+                <label for="LocalFood">How often do you eat locally sourced food?</label>
+                <select name="LocalFood" id="LocalFood">
+                    <option value="Often">Often</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Rarely">Rarely</option>
+                </select>
+                <br>
+
+                <label for="Transport">What is your primary mode of transportation?</label>
+                <select name="Transport" id="Transport">
+                    <option value="Bike">Bike</option>
+                    <option value="Public Transit">Public Transit</option>
+                    <option value="Car">Car</option>
+                    <option value="Walk">Walk</option>
+                </select>
+                <br>
+
+                <label for="EnergySource">Which type of energy does your home use?</label>
+                <select name="EnergySource" id="EnergySource">
+                    <option value="Renewable">Renewable</option>
+                    <option value="Non-renewable">Non-renewable</option>
+                    <option value="Mixed">Mixed</option>
+                </select>
+                <br>
+
+                <label for="Housing">Do you live in an apartment or house?</label>
+                <select name="Housing" id="Housing">
+                    <option value="House">House</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br>
+
+                <label for="Clothing">How often do you shop for clothes?</label>
+                <select name="Clothing" id="Clothing">
+                    <option value="Always">Always</option>
+                    <option value="Often">Often</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Rarely">Rarely</option>
+                </select>
+                <br>
+
+                <label for="Sustainability">Do you shop sustainably?</label>
+                <select name="Sustainability" id="Sustainability">
+                    <option value="True">Yes</option>
+                    <option value="False">No</option>
+                </select>
+                <br>
+
+                <label for="CommInvolv">How involved are you in your community?</label>
+                <select name="CommInvolv" id="CommInvolv">
+                    <option value="High">High</option>
+                    <option value="Moderate">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <br>
+
+                <label for="Gender">Which gender do you most strongly identify with?</label>
+                <select name="Gender" id="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Non-binary">Non-binary</option>
+                </select>
+                <br>
+
+                <label for="Plastic">How often do you use plastic products?</label>
+                <select name="Plastic" id="Plastic">
+                    <option value="Never">Never</option>
+                    <option value="Often">Often</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Rarely">Rarely</option>
+                </select>
+                <br>
+
+                <label for="Disposal">How do you dispose of your products?</label>
+                <select name="Disposal" id="Disposal">
+                    <option value="Composting">Composting</option>
+                    <option value="Recycling">Recycling</option>
+                    <option value="Landfill">Landfill</option>
+                    <option value="Combination">Combination</option>
+                </select>
+                <br>
+
+                <label for="PhysAct">How do you rate your level of physical activity?</label>
+                <select name="PhysAct" id="PhysAct">
+                    <option value="High">High</option>
+                    <option value="Moderate">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <br>
+
+                <label for="EnvAware">How do you rate your level of environmental awareness?</label>
+                <select name="EnvAware" id="EnvAware">
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                </select>
+                <br>
+
+                <div class="text-center mt-4">
+                    <input type="submit" class="sustainability-btn" value="Submit">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

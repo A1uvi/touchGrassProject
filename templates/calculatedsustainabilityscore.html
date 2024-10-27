@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Calculated Sustainability Score{% endblock %}
+
+{% block content %}
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+        <!-- About Section Heading-->
+        <div class="text-center">
+            <br><br><br>
+            <h2 class="page-section-heading d-inline-block text-white" style="line-height: 110%;">Your Sustainability Score is {{ predicted_sustainability_index }}</h2>
+        </div>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="row">
+            <div class="col-lg-4 ml-auto">
+                <p class="pre-wrap lead">The sustainability scores range from 1 to 5, 5 indicating that the lifestyle is highly sustainable and 1 indicating that the lifestyle is highly unsustainable. These ratings are calculated using a Random Forest model that has been trained on data stored <a href="https://www.kaggle.com/datasets/naveennas/sustainable-lifestyle-rating-dataset/data" style="color: #ba4748;">here.</a></p>
+            </div>
+            <div class="col-lg-4 mr-auto">
+                <p class="pre-wrap lead">If your sustainability score is low, we encourage you to relfect on your lifestyle. No matter how much or little you touch grass, sustainability has a huge impact on the environment and damages natural foliage. Consider the following heatmap to see what factors most greatly impact the sustainability scores and how you can change for the better.</p>
+            </div>
+        </div>
+        <div class="container d-flex align-items-center flex-column">
+            <img width="80%" height="80%" src="static/assets/img/sustainabilitylifestyleratingheatmap.png">
+            <img width="80%" height="80%" src="static/assets/img/feature_importances.png">
+            <p class="pre-wrap lead">Do you know someone who needs to touch grass? Send touchGrass to them today and keep promoting sustainability and mental health.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

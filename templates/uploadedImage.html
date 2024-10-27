@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Uploaded Flower Image{% endblock %}
+
+{% block content %}
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+        <!-- About Section Heading-->
+        <div class="text-center">
+            <br><br><br>
+            <h2 class="page-section-heading d-inline-block text-white">You found a {{ flower_name }}!</h2>
+            <p>Good job. You touched grass.</p>
+        </div>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="row">
+            <div class="col-lg-4 ml-auto">
+                <p class="pre-wrap lead">{{ flower_mindfulness }}</p>
+            </div>
+            <div class="col-lg-4 mr-auto">
+                <p class="pre-wrap lead">{{ flower_climatechange }}</p>
+            </div>
+        </div>
+        <div class="container d-flex align-items-center flex-column">
+            <p class="pre-wrap lead">If you want to keep the {{ flower_name }}s safe, do YOUR part by changing to a more sustainable lifestyle. Don't know how sustainable your lifetyle is? Determine your sustainability score on the next page!</p>
+            <div class="text-center mt-4">
+                <a href="/sustainabilityscore" class="sustainability-btn">Calculate your sustainability score by clicking here!</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

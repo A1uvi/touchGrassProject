@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Challenge{% endblock %}
+
+{% block content %}
+
+<section class="page-section" id="contact">
+    <div class="container">
+        <p class="pre-wrap masthead-subheading font-weight-light mb-0"></p>
+        <p class="pre-wrap masthead-subheading font-weight-light mb-0"></p>
+        <!-- Contact Section Heading-->
+        <div class="text-center">
+            <br><br><br><br>
+            <h2 class="page-section-heading text-secondary d-inline-block mb-0">CHALLENGE: TOUCH GRASS</h2>
+            <br>
+            <br>
+        </div>
+        <!-- Contact Section Content-->
+        <div class="row justify-content-center">
+            <p class="pre-wrap masthead-subheading font-weight-light mb-0">You have been challenged to go outside to touch grass. To prove you accomplished your mission, take a picture of one of the following types of flowers: Astilbe, Bellflower, Black Eyed Susan, Calendula, California Poppy, Carnation, Common Daisy, Coreopsis, Dandelion, Iris, Rose, Sunflower, Tulip, or Water Lily.</li>
+            </p>
+        </div>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Upload Form -->
+        <div class="form">
+            <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+                <h2>Submit your image here:</h2>
+                <br>
+                <label for="myFile" class="upload-box">
+                    Click to upload an image
+                    <input type="file" id="myFile" name="file" accept="image/*">
+                </label>
+                <input type="submit" value="Submit">
+            </form>            
+        </div>
+    </div>
+</section>
+{% endblock %}
